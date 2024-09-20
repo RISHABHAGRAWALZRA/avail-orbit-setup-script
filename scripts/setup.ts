@@ -91,7 +91,7 @@ async function main() {
       console.log('Funding batch-poster accounts on parent chain with 0.3 ETH')
       const tx1 = await signer.sendTransaction({
         to: config.batchPoster,
-        value: ethers.utils.parseEther('0.3'),
+        value: ethers.utils.parseEther('0.1'),
       })
       console.log(`Transaction hash on parent chain: ${tx1.hash}`)
       const receipt1 = await tx1.wait()
@@ -105,7 +105,7 @@ async function main() {
       console.log('Funding staker accounts on parent chain with 0.3 ETH')
       const tx2 = await signer.sendTransaction({
         to: config.staker,
-        value: ethers.utils.parseEther('0.3'),
+        value: ethers.utils.parseEther('0.1'),
       })
       console.log(`Transaction hash on parent chain: ${tx2.hash}`)
       const receipt2 = await tx2.wait()
@@ -131,7 +131,7 @@ async function main() {
       while (true) {
         depositCheckTime++
         const newBalance = await L3Provider.getBalance(config.chainOwner)
-        if (newBalance.sub(oldBalance).gte(ethers.utils.parseEther('0.4'))) {
+        if (newBalance.sub(oldBalance).gte(ethers.utils.parseEther('0.1'))) {
           console.log(
             'Balance of your account on Orbit chain increased by the native token you have just sent.'
           )
@@ -160,6 +160,8 @@ async function main() {
       await createERC20Bridge(L2_RPC_URL, privateKey, L3_RPC_URL, config.rollup)
       rs.tokenBridgeDeployed = true
     }
+
+
     ////////////////////////////////
     /// L3 Chain Configuration ///
     //////////////////////////////
@@ -170,6 +172,7 @@ async function main() {
       await l3Configuration(privateKey, L2_RPC_URL, L3_RPC_URL)
       rs.l3config = true
     }
+
     ////////////////////////////////
     /// Transfering ownership /////
     //////////////////////////////
@@ -180,6 +183,7 @@ async function main() {
       await transferOwner(privateKey, L2Provider, L3Provider)
       rs.transferOwnership = true
     }
+
   } catch (error) {
     console.error('Error occurred:', error)
     const runtimeString = JSON.stringify(rs)
