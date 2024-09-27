@@ -1,8 +1,8 @@
 import { ethers, Wallet } from 'ethers'
 import { JsonRpcProvider } from '@ethersproject/providers'
-import UpgradeExecutor from '@arbitrum/nitro-contracts/build/contracts/src/mocks/UpgradeExecutorMock.sol/UpgradeExecutorMock.json'
+import UpgradeExecutor from '@avail-project/avail-nitro-contracts/build/contracts/src/mocks/UpgradeExecutorMock.sol/UpgradeExecutorMock.json'
 
-import ArbOwner from '@arbitrum/nitro-contracts/build/contracts/src/precompiles/ArbOwner.sol/ArbOwner.json'
+import ArbOwner from '@avail-project/avail-nitro-contracts/build/contracts/src/precompiles/ArbOwner.sol/ArbOwner.json'
 import fs from 'fs'
 import { L3Config } from './l3ConfigType'
 import { TOKEN_BRIDGE_CREATOR_Arb_Sepolia } from './createTokenBridge'

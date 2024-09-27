@@ -19,8 +19,8 @@ import {
   createTokenBridgePrepareTransactionReceipt,
   createTokenBridgePrepareSetWethGatewayTransactionRequest,
   createTokenBridgePrepareSetWethGatewayTransactionReceipt,
-} from '@arbitrum/orbit-sdk'
-import { sanitizePrivateKey } from '@arbitrum/orbit-sdk/utils'
+} from '@avail-project/avail-orbit-sdk'
+import { sanitizePrivateKey } from '@avail-project/avail-orbit-sdk/utils'
 
 import { L3Config } from './l3ConfigType'
 

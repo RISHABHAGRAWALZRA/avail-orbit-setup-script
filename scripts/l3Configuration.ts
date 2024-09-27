@@ -1,5 +1,5 @@
-import { abi as ArbOwner__abi } from '@arbitrum/nitro-contracts/build/contracts/src/precompiles/ArbOwner.sol/ArbOwner.json'
-import { abi as ArbGasInfo__abi } from '@arbitrum/nitro-contracts/build/contracts/src/precompiles/ArbGasInfo.sol/ArbGasInfo.json'
+import { abi as ArbOwner__abi } from '@avail-project/avail-nitro-contracts/build/contracts/src/precompiles/ArbOwner.sol/ArbOwner.json'
+import { abi as ArbGasInfo__abi } from '@avail-project/avail-nitro-contracts/build/contracts/src/precompiles/ArbGasInfo.sol/ArbGasInfo.json'
 import { ethers } from 'ethers'
 import { L3Config } from './l3ConfigType'
 import fs from 'fs'
