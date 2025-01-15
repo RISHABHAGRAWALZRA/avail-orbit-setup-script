@@ -85,7 +85,7 @@ services:
       service: proxy
 
   nitro:
-    image: avail-nitro-node:v2.2.1-upstream-v3.2.1
+    image: availj/avail-nitro-node:v2.2.1-upstream-v3.2.1
     ports:
       - "127.0.0.1:8449:8449"
     volumes:
